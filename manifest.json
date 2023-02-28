@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "OpenRussian Anki Plus",
+    "version": "1.0",
+    "description": "Add anki cards on OpenRussian",
+    "icons": {
+        "128": "images/r-icon.png"
+    },
+    "content_scripts": [
+        {
+            "js": ["scripts/content.js"],
+            "matches": [
+                "https://en.openrussian.org/ru/*"
+            ]
+        }
+    ],
+    "action": {},
+    "background": {
+        "service_worker": "background.js"
+      },
+      
+    "host_permissions": ["<all_urls>"]
+}
